@@ -18,7 +18,8 @@ const TopNav = () => {
       {console.log(isLoggedIn)};
       <Navbar color="faded" light>
         <NavbarToggler onClick={toggleNavbar}></NavbarToggler>
-        <NavbarBrand style={{marginLeft: '20px'}} onClick={logOutHandler} href="/login" >Sign Out</NavbarBrand>
+        <Link to="/login" onClick={logoutHandler}>Logout</Link>
+        {/* <NavbarBrand style={{marginLeft: '20px'}} onClick={logOutHandler} href="/login" >Sign Out</NavbarBrand> */}
         {/* <NavbarBrand href="/" className="mr-auto">reactstrap</NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} className="mr-2" /> */}
         <Collapse isOpen={!collapsed} navbar>
