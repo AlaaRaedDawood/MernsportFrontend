@@ -14,9 +14,9 @@ export default function Routes() {
         <BrowserRouter>
             <TopNav></TopNav>
             <Switch>
-                <Route path='/login' exact component={Login} />
-                <Route path='/register' exact component={Register} />
                 <Route path='/' exact component={Dashboard} />
+                <Route path='/register' exact component={Register} />
+                <Route path='/login' exact component={Login} />
                 <Route path='/event' component={Event} />
                 <Route path='/registerationresult' component={RegisterationsResultsView} />
                 <Route path='/registeration' component={RegisterationsView} />

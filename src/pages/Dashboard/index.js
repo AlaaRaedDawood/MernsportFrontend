@@ -114,14 +114,15 @@ import socketio from 'socket.io-client';
         setEventsRequest(new_Events_Requests);
     }
     const getEvents = async (filter) => {
-        // if(!(user && user_id)){
-        //     history.push("/login")
-        // }
+        if(!(user || user_id)){
+            history.push("/login")
+        }
         if(filter == "myEvents"){
-            console.log("allllllllaaaaaaaa " +filter);
+
+            console.log("allllllllaaaaaaaa " + filter);
             const url = '/dashboardUserId' ;
             const response =  await api.get(url , { headers : {user}}) ;
-            // console.log(url + "alllllllllll " +response.data) ;
+            console.log(url + "alllllllllll " +response.data) ;
            // setEvent(response.data)
             response.data && setEvent(response.data.events) ;
         }else{
