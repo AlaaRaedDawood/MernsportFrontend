@@ -5,6 +5,7 @@ import CameraIcon from '../../assets/cameraIcon.png'
 import "./event.css";
 export default function Event ({ history }){
     const user_id = localStorage.getItem('userID');
+    const user = localStorage.getItem('userToken');
     console.log(user_id);
     const [formKey,setFormKey] = useState(1);
     const [sport,setSport] = useState('Sport');
@@ -70,7 +71,7 @@ export default function Event ({ history }){
             ) {
                 if(parseFloat(price)){
                     console.log("Event has been sent")
-                    const response = await api.post("/event/createEvent", eventData, { headers: { user } })
+                    const response = await api.post("/event/createEvent", eventData, { headers : {user}})
                     console.log(eventData)
                     console.log(response);
                     console.log("Event has been saved")
