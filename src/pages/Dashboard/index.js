@@ -114,6 +114,9 @@ import socketio from 'socket.io-client';
         setEventsRequest(new_Events_Requests);
     }
     const getEvents = async (filter) => {
+        if(!(user && user_id)){
+            history.history.push("/login")
+        }
         if(filter == "myEvents"){
             console.log("allllllllaaaaaaaa " +filter);
             const url = '/dashboardUserId' ;
