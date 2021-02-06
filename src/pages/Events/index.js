@@ -49,7 +49,7 @@ export default function Event ({ history }){
     }
     const submitHandler = async (evt) => { 
         evt.preventDefault();
-       // const user_id = localStorage.getItem('userID');
+        const user_id = localStorage.getItem('userID');
         const user = localStorage.getItem('userToken');
         const eventData = new FormData();
        
@@ -70,8 +70,9 @@ export default function Event ({ history }){
             ) {
                 if(parseFloat(price)){
                     console.log("Event has been sent")
-                    await api.post("/event/createEvent", eventData, { headers: { user } })
+                    const response = await api.post("/event/createEvent", eventData, { headers: { user } })
                     console.log(eventData)
+                    console.log(response);
                     console.log("Event has been saved")
                     setSuccessValue(true);
                     setTimeout(() => {
