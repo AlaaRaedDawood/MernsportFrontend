@@ -20,6 +20,7 @@ export default function Login({ history }) {
                 const response = await api.post('/user/register', {firstName , lastName , email , password})
                 const userId = response.data.user_id || false;
                 const user = response.data.user || false;
+                
                 if (userId && user) {
                     localStorage.setItem('userID', userId);
                     localStorage.setItem('userToken', user);
