@@ -23,11 +23,11 @@ export default function Login({ history }) {
                 const user = response.data.user || false
                 
                 if (user && userId) {
-                    console.log(url + "alllllllllll " +response.data) ;
+                    console.log("alllllllllll " +response.data) ;
                     localStorage.setItem('userID', userId)
                     localStorage.setItem('userToken', user)
                     setIsloggedIn(true);
-                    history.push('/dashboard')
+                    history.push('/')
                 } else {
                     const { message } = response.data
                     console.log(message)
