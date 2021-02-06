@@ -1,0 +1,37 @@
+label#thumbnail {
+    margin-bottom: 20px;
+    border: 1px solid black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: 120px;
+}
+
+label#thumbnail input {
+    display: none;
+}
+
+label#thumbnail.has-thumbnail {
+    border: 1px solid black;
+}
+
+label#thumbnail.has-thumbnail img {
+    display: none;
+}
+
+.container > .event-validation {
+    margin-top: 10px;
+    margin-left: 70px ;
+}
+#dashBoardButton {
+    background-color: #5236f4;
+    margin: 5px;
+
+}
+#logOutButton{
+    background-color: #f44336;
+    margin: 5px;
+}
